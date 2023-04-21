@@ -25,7 +25,7 @@ public class AgregarParticipante extends JFrame {
 	private JTextField region;
 	NuevaInscripcion registro;
 
-	public AgregarParticipante(NuevaInscripcion registro) throws SQLException {
+	public AgregarParticipante(NuevaInscripcion registro) {
 		this.registro = registro;
 		setupUIComponents();
 	}
@@ -54,7 +54,7 @@ public class AgregarParticipante extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				try {
 					onBotonCargar();
-				} catch (SQLException e1) {
+	} catch (Exception e1) {
 					throw new RuntimeException(e1);
 				}
 			}
